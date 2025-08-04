@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 8vw 10vw;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2 {
+
+}
+
+.recipe-intro h1 {
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-intro p {
+    padding-left: 1.5rem;
+    border-left: 1px solid #ccc;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.recipe-info__item {
+    display: flex;
+    align-items: center;
+}
+
+.recipe-info__item:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+.recipe-info__item img {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.recipe-info__item span {
+    font-size: 0.875rem;
+    line-height: 1;
+    color: #4c4c4c;
+}
