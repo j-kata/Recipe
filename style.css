@@ -1,6 +1,9 @@
+:root {
+    --highlight-color: #541616;
+}
+
 body {
     margin: 0;
-    padding: 8vw 10vw;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.45;
@@ -8,12 +11,9 @@ body {
     background-color: #f9f9f9;
 }
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 h1 {
+    margin: 0;
+    margin-bottom: 1.5rem;
     font-family: "Nunito Sans", sans-serif;
     font-size: 3rem;
     line-height: 1.2;
@@ -21,12 +21,25 @@ h1 {
 }
 
 h2 {
-
+    margin: 0;
+    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-size: 700;
 }
 
-.recipe-intro h1 {
-    margin: 0;
-    margin-bottom: 1.5rem;
+main {
+    padding: 8vw 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10vw;
+}
+
+.text-highlight {
+    color: var(--highlight-color);
 }
 
 .recipe-intro p {
@@ -42,6 +55,7 @@ h2 {
 .recipe-info__item {
     display: flex;
     align-items: center;
+    margin-top: 1.75rem;
 }
 
 .recipe-info__item:not(:last-child) {
@@ -59,4 +73,76 @@ h2 {
     font-size: 0.875rem;
     line-height: 1;
     color: #4c4c4c;
+}
+
+.recipe-ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 3rem;
+}
+
+.recipe-ingredients__col:first-child {
+    width: 65%;
+    margin-right: 5%;
+}
+
+.recipe-ingredients__list {
+    margin: 0;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.recipe-ingredients__list li {
+    margin-bottom: 0.25rem;
+}
+
+.recipe-steps {
+    margin-top: 3rem;
+}
+
+.recipe-steps__list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: counter;
+}
+
+.recipe-steps__list li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.875rem;
+    font-size: 1.125rem;
+}
+
+.recipe-steps__list li::before {
+    display: block;
+    margin-right: 0.75rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.275rem;
+    color: var(--highlight-color);
+    content: counter(counter)".";
+    counter-increment: counter;
+}
+
+.page-footer { 
+    margin-top: 4rem;
+    background: var(--highlight-color);
+}
+
+.page-footer__inner {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    color: #fff;
+}
+
+.page-footer img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
 }
