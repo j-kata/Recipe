@@ -28,6 +28,10 @@ h2 {
     font-size: 700;
 }
 
+img {
+    max-width: 100%;
+}
+
 main {
     padding: 8vw 0;
 }
@@ -77,14 +81,24 @@ main {
 
 .recipe-ingredients {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
+    gap: 2rem;
     margin-top: 3rem;
 }
 
 .recipe-ingredients__col:first-child {
-    width: 65%;
-    margin-right: 5%;
+    width: 60%;
+}
+
+@media screen and (max-width: 780px) {
+    .recipe-ingredients {
+        flex-direction: column;
+    }
+
+    .recipe-ingredients__col:first-child {
+        width: 100%;
+        max-width: 360px;
+    }
 }
 
 .recipe-ingredients__list {
@@ -133,16 +147,36 @@ main {
 .page-footer__inner {
     display: flex;
     align-items: flex-start;
-    padding: 1.5rem 0;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
     color: #fff;
 }
 
+@media screen and (max-width: 460px) {
+    .page-footer__inner {
+        flex-direction: column;
+    }
+}
+
 .page-footer img {
+    flex-shrink: 0;
     display: inline-block;
     width: 100px;
     height: 100px;
-    margin-right: 1.5rem;
     border-radius: 50%;
     object-position: center;
     object-fit: cover;
+}
+
+.page-footer p {
+    margin: 0;
+    margin-bottom: 0.75rem;
+}
+
+.page-footer a {
+    color: #da9393;
+}
+
+.page-footer a:hover {
+    color: #fff;
 }
