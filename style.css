@@ -33,13 +33,15 @@ img {
 }
 
 main {
-    padding: 8vw 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .text-highlight {
